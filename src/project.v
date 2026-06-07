@@ -15,17 +15,17 @@ module tt_um_homebrew_cpu (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 
-    wire [7:0] reg_out;
+    wire [7:0] regA_out;
 );
 
     register8 regA (
         .clk(clk),
         .d(ui_in),
-        .q(reg_out)
+        .q(regA_out)
     );
     
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = reg_out;
+  assign uo_out  = regA_out;
   assign uio_out = 0;
   assign uio_oe  = 0;
 
