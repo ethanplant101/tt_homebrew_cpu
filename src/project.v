@@ -14,6 +14,8 @@ module tt_um_homebrew_cpu (
     input  wire       ena,      // always 1 when the design is powered, so you can ignore it
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
+
+    wire [7:0] reg_out;
 );
 
     register8 regA (
