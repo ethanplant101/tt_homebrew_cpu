@@ -20,6 +20,7 @@ module tt_um_homebrew_cpu (
     
     register8 regA (
         .clk(clk),
+        .load(ui_in[0]),
         .d(ui_in),
         .q(regA_out)
     );
